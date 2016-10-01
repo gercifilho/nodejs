@@ -1,0 +1,41 @@
+<html>
+    <body>
+    <% if(locals.validationErrors){%>
+        <ul>
+         <% for(var i=0; i< validationErrors.length; i++) {%>
+           <li> <%= validationErrors[i].msg %> 
+         <% } %>
+        </ul>
+    <% } %>
+        <form action="/produtos" method="post" class"well" role="form">
+             <div class="form-group">
+                  <label for="titulo">Titulo</label>
+                  <div class="input-group">
+                      <spam class="input-group-addon">
+                          <i class="glyphicon glyphicon-unchecked"
+                      </spam>
+                      <input type="text" name="titulo" placeholder="titulo do livro"/>
+                  </div>
+             </div>
+              <div class="form-group">
+                  <label for="preco">Preco</label>
+                  <div class="input-group">
+                      <spam class="input-group-addon">
+                          <i class="glyphicon glyphicon-unchecked"
+                      </spam>
+                      <input type="text" name="preco" placeholder="valor do livro"/>
+                  </div>
+             </div>
+             <div class="form-group">
+                  <label for="descricao">Descrição</label>
+                  <div class="input-group">
+                      <spam class="input-group-addon">
+                          <i class="glyphicon glyphicon-unchecked"
+                      </spam>
+                      <textarea name="descricao"></textarea>
+                  </div>
+             </div>
+             <button type="submit" class="btn btn-primary">Gravar</button>
+        </form>
+    </body>
+</html>
